@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+    <head>
+    
+        <style>
+            body
+            {
+                background-image: url("mars.gif"); /*insere plano de fundo da imagem*/ 
+                background-position: center; /*centraliza a posição do plano de fundo*/
+                background-size: cover;/* preserva as propriedades de tamanho da imagem*/
+            }
+
+            #myCanvas
+            {
+            margin-top: 30px;/*tamanho da amrgem no topo*/
+            border-width: 10px; /*largura da borda*/
+            background-color: white;/*cor do plano de fundo do canvas*/
+            border-style: ridge;/*tipo de borda*/
+            }
+            h1,h4
+            {
+                color:white !important;/*para evitar ambiguidades e usar essa característica como principal*/
+
+            }
+        </style>
+        <!--LINKS DO BOOTSTRAP-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+        <title>Movendo o Rover sobre Marte</title>
+    </head>
+    <!--Função add criada para carregar canvas, rover e img de fundo quando iniciar-->
+    <body onload="add();">
+        <center>
+            <!--Título do Canva-->
+            <h1>Movendo o Rover sobre Marte</h1>
+
+            <!--Criação do Canva em html-->
+            <canvas id="myCanvas" width="800" height="650"></canvas>
+
+            <h4>
+                <!--o text-danger é bootstrap, deixa o texto vermelho-->
+                <b class="text-danger">NOTA: </b>SE O ROVER NÃO APARECER PRESSIONE QUALQUER TECLA DIRECIONAL
+            </h4>
+        </center>
+        
+        <!--CONEXÃO DO JAVASCRIPT PELO HTML-->
+        <script src="main.js"></script>
+    </body>
+</html>
